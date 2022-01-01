@@ -1,3 +1,6 @@
+#[cfg(not(debug_assertions))]
+compile_error!("Why are you deploying this to production");
+
 #![no_std]
 #![cfg_attr(yolo_rustc_bootstrap, feature(allow_internal_unstable))]
 
